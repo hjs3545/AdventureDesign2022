@@ -4,4 +4,6 @@
     <string name="FOODCHEAP">FOODCHEAP</string>
     <string name="getstarted">Get started</string>
     <string name="우리동네마감음식찾기">우리동네 마감음식 찾기</string>
+    <string name="설명1멘트1">음식을 파는 가게에서 음식이 남으면 버리기가 아쉽지 않으세요?</string>
+    <string name="설명1멘트2">우리는 이러한 문제들을 해결해준답니다!\n바로 FOODCHEAP 을 통해서 말이죠!</string>
 </resources>
