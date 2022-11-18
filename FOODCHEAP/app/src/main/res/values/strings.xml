@@ -1,4 +1,7 @@
+
 <resources>
-    <string name="app_name">test1</string>
-    <string name="test_text">텍스트잘들어가네</string>
+
+    <string name="FOODCHEAP">FOODCHEAP</string>
+    <string name="getstarted">Get started</string>
+    <string name="우리동네마감음식찾기">우리동네 마감음식 찾기</string>
 </resources>

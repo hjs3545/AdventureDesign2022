@@ -4,37 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/첫화면배경화면"
+    android:background="@color/녹색"
     tools:context=".MainActivity">
 
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="28dp"
         android:onClick="onButton2Clicked"
-        android:text="ㅇㅇ"
+        android:text="@string/getstarted"
+        android:background="@drawable/button_gradation"
+        app:backgroundTint="@null"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.623"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="161dp"/>
+        <!-- app:backgroundTint="@color/연두색"-->
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="336"
-        android:layout_height="396"
-        android:layout_marginBottom="180dp"
+        android:layout_width="336dp"
+        android:layout_height="396dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.546"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/브로콜리" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bro" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="329dp"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal"
+        android:text="@string/FOODCHEAP"
+        android:textColor="@color/연두색1"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/우리동네마감음식찾기"
+        android:textColor="@color/연두색1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.062" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
