@@ -1,4 +1,4 @@
-package com.example.test1;
+package com.example.FOODCHEAP;
 
 import android.os.Bundle;
 import androidx.annotation.Nullable;
