@@ -7,7 +7,7 @@
     android:background="@color/white">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
@@ -39,7 +39,7 @@
         android:layout_height="47dp"
         android:layout_marginBottom="252dp"
         android:gravity="center_horizontal"
-        android:text="@string/설명3멘트1"
+        android:text="@string/설명4멘트1"
         android:textColor="@color/연두색1"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="172dp"
         android:gravity="center_horizontal"
-        android:text="@string/설명3멘트2"
+        android:text="@string/설명4멘트2"
         android:textColor="@color/연두색1"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,16 +62,16 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView5"
         android:layout_width="413dp"
         android:layout_height="274dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.22000003"
-        app:srcCompat="@drawable/explain3" />
+        app:srcCompat="@drawable/explain4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
