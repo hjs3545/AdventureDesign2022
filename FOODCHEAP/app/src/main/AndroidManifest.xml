@@ -32,6 +32,8 @@
         <activity android:name=".explain3"/>
         <activity android:name=".explain4"/>
         <activity android:name=".login"/>
+        <activity android:name=".user_page"/>
+        <activity android:name=".milk"/>
     </application>
 
 </manifest>
