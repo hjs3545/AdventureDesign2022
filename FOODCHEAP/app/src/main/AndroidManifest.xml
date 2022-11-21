@@ -29,6 +29,7 @@
 
         <activity android:name=".explain1"/>
         <activity android:name=".explain2"/>
+        <activity android:name=".explain3"/>
     </application>
 
 </manifest>

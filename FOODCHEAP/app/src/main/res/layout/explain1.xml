@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.22000003"
-        app:srcCompat="@drawable/chef" />
+        app:srcCompat="@drawable/explain1" />
 
     <TextView
         android:id="@+id/textView5"

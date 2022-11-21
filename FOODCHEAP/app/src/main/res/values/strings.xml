@@ -4,10 +4,13 @@
     <string name="app_name">FOODCHEAP</string>
     <string name="FOODCHEAP">FOODCHEAP</string>
     <string name="getstarted">Get started</string>
+    <string name="next">next</string>
     <string name="우리동네마감음식찾기">우리동네 마감음식 찾기</string>
     <string name="설명1멘트1">음식을 파는 가게에서 음식이 남으면 버리기가 아쉽지 않으세요?</string>
     <string name="설명1멘트2">우리는 이러한 문제들을 해결해준답니다!\n바로 FOODCHEAP 을 통해서 말이죠!</string>
     <string name="설명2멘트1">당신의 취향대로 음식을 고르세요!</string>
     <string name="설명2멘트2">서비스를 제공하는 가게에서 음식이 있다면\n 당신은 살 수 있답니다!</string>
-    <string name="next">next</string>
+    <string name="설명3멘트1">배달 &amp; 픽업</string>
+    <string name="설명3멘트2">FOODCHEAP은 배달과 픽업 모두 지원한답니다.\n퇴근길, 하굣길, 집에서\n편하게 이용하세요!</string>
+
 </resources>
