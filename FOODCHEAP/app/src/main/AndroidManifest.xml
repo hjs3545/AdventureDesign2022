@@ -31,6 +31,7 @@
         <activity android:name=".explain2"/>
         <activity android:name=".explain3"/>
         <activity android:name=".explain4"/>
+        <activity android:name=".login"/>
     </application>
 
 </manifest>
