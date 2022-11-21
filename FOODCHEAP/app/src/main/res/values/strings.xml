@@ -14,5 +14,13 @@
     <string name="설명3멘트2">FOODCHEAP은 배달과 픽업 모두 지원한답니다.\n퇴근길, 하굣길, 집에서\n편하게 이용하세요!</string>
     <string name="설명4멘트1">학생 후원 서비스</string>
     <string name="설명4멘트2">당신은 너그러운 사장님이십니다.\n후원 서비스를 이용해주세요!</string>
+    <string name="로그인멘트1">FOODCHEAP에 오신 것을 환영합니다.</string>
+    <string name="유저아이디">User ID</string>
+    <string name="유저패스워드">User Password</string>
+    <string name="로그인">LOG-IN</string>
+    <string name="페이스북으로계속">Continue with Facebook</string>
+    <string name="구글로계속">Continue with Google</string>
+    <string name="새로운계정">새로운 계정이 필요하신가요?</string>
+    <string name="회원가입">Sign Up</string>
 
 </resources>
