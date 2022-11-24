@@ -1,5 +1,6 @@
 package com.example.FOODCHEAP;
 
+import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -24,6 +25,15 @@ public class user_page extends AppCompatActivity {
                 startActivity(intent);
             }
 
+        });
+
+        TextView shopText = (TextView) findViewById(R.id.textView4);
+        shopText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), shop_information.class);
+                startActivity(intent);
+            }
         });
     }
 }
