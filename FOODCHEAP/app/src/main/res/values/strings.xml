@@ -22,5 +22,26 @@
     <string name="구글로계속">Continue with Google</string>
     <string name="새로운계정">새로운 계정이 필요하신가요?</string>
     <string name="회원가입">Sign Up</string>
+    <string name="우리동네환경지킴이">우리동네 환경지킴이</string>
+    <string name="쿠키네식료품">쿠키네 식료품</string>
+    <string name="쿠키네주소">대전광역시 궁동 123-456 쿠키빌라 101호</string>
+    <string name="후원관리">후원 관리</string>
+    <string name="후원">후원</string>
+    <string name="배고픈학생들">배고픈 학생들을 도와주세요!</string>
+    <string name="방법이궁금해요">방법이 궁금해요!</string>
+    <string name="후원자목록">후원자 목록</string>
+    <string name="후원상품추가">후원 상품 추가</string>
+    <string name="후원자공지사항">후원자 공지사항</string>
+    <string name="후원자후기">후원자 후기</string>
+    <string name="후원금액">후원 금액</string>
+    <string name="이번달후원액">이번 달 총 후원액</string>
+    <string name="오늘의후원액">오늘의 후원</string>
+    <string name="이십이만원">220,000</string>
+    <string name="사만삼천원">43,000</string>
+    <string name="고객센터">고객센터</string>
+    <string name="고객센터번호">1577-1234</string>
+    <string name="채팅으로상담원연결">채팅으로 상담원 연결</string>
+
+
 
 </resources>

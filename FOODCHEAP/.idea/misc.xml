@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3195" />
+        <entry key="app/src/main/res/drawable/back_button.xml" value="0.2805" />
         <entry key="app/src/main/res/drawable/button_gradation.xml" value="0.3195" />
         <entry key="app/src/main/res/drawable/circle_effect.xml" value="0.384" />
+        <entry key="app/src/main/res/drawable/gray_block.xml" value="0.2135" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3195" />
         <entry key="app/src/main/res/drawable/round_effect.xml" value="0.297" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
@@ -14,8 +16,11 @@
         <entry key="app/src/main/res/layout/explain3.xml" value="0.2891119341478281" />
         <entry key="app/src/main/res/layout/explain4.xml" value="0.3943191528320313" />
         <entry key="app/src/main/res/layout/login.xml" value="0.3903985507246377" />
+        <entry key="app/src/main/res/layout/milk.xml" value="0.24509803921568626" />
         <entry key="app/src/main/res/layout/milk_page.xml" value="0.3903985507246377" />
         <entry key="app/src/main/res/layout/second.xml" value="0.4109375" />
+        <entry key="app/src/main/res/layout/shop_information.xml" value="0.3903985507246377" />
+        <entry key="app/src/main/res/layout/support.xml" value="0.2705646785882002" />
         <entry key="app/src/main/res/layout/user_page.xml" value="0.3903985507246377" />
         <entry key="app/src/main/res/xml/button_gradation.xml" value="0.391304347826087" />
       </map>
