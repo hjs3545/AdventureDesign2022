@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:background="@color/white"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <Button
+            android:background="@drawable/final_back_button"
+            android:drawableLeft="@drawable/back_button"
+            android:paddingLeft="11dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" android:id="@+id/backButton2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.068" app:layout_constraintVertical_bias="0.053"/>
+    <TextView
+            android:text="김푸드님의 장바구니"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView27"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.312" app:layout_constraintVertical_bias="0.055"/>
+    <TextView
+            android:text="쿠키네 식료품"
+            android:textStyle="bold"
+            android:textColor="@color/연두색1"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView28"
+            app:layout_constraintHorizontal_bias="0.12" app:layout_constraintVertical_bias="0.125"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="365dp" android:layout_height="465dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/productList"
+            app:layout_constraintVertical_bias="0.362"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
