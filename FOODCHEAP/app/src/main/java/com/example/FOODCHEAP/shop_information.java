@@ -48,7 +48,7 @@ public class shop_information extends AppCompatActivity {
         ProductList.add(new product("쿠키네 식료품", R.drawable.shred_cheese,  "6,900원", "5,000원", "-28%", "슈레드 모짜렐라 300g", "진한 풍미와 쫄깃한 식감", "~12/23", 7));
         ProductList.add(new product("쿠키네 식료품", R.drawable.butter, "6,100원", "4,500원", "-27%", "가염 버터 240g", "신선한 국산 원유로 만든 국산 유크림 100%의 고품격 버터", "~1/3", 14));
         ProductList.add(new product("쿠키네 식료품", R.drawable.yogurt,  "2,980원", "2,000원", "-33%", "빙그레 요플레 85g x 4", "2000억 프로바이오틱스", "~12/12", 4));
-        //ProductList.add(new product("쿠키네 식료품", R.drawable.bananamilk, "9,800원", "7,350원", "-25%", "빙그레 바나나맛 우유 8개입", "기분 좋은 달콤함과 단지 모양의 용기", "~12/5", 12));
+        ProductList.add(new product("쿠키네 식료품", R.drawable.bananamilk, "9,800원", "7,350원", "-25%", "빙그레 바나나맛 우유 8개입", "기분 좋은 달콤함과 단지 모양의 용기", "~12/5", 12));
 
         ADAPTER = new productAdapter(ProductList);
         ADAPTER.setOnItemClickListener(new productAdapter.OnItemClickEventListener() {
