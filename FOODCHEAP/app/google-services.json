@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "98391754512",
+    "project_id": "foodcheap-15eb5",
+    "storage_bucket": "foodcheap-15eb5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98391754512:android:dd84384b4c9b369fd88795",
+        "android_client_info": {
+          "package_name": "com.example.FOODCHEAP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98391754512-ai1mppntg6pk20d8l0brjbi1i7jsqofc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkS-zBiIXaGyIJkqhPZXkDrcyCu_T2mIE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98391754512-ai1mppntg6pk20d8l0brjbi1i7jsqofc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

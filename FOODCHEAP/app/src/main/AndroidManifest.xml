@@ -36,6 +36,9 @@
         <activity android:name=".milk"/>
         <activity android:name=".shop_information"/>
         <activity android:name=".productDetail"/>
+        <activity android:name=".register"/>
     </application>
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
