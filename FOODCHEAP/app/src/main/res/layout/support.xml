@@ -158,7 +158,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516"
-        app:srcCompat="@drawable/목록" />
+        app:srcCompat="@drawable/list" />
 
     <TextView
         android:id="@+id/textView40"
@@ -185,7 +185,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516"
-        app:srcCompat="@drawable/공지사항" />
+        app:srcCompat="@drawable/board" />
 
     <ImageView
         android:id="@+id/imageView23"
@@ -197,7 +197,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516"
-        app:srcCompat="@drawable/스마일" />
+        app:srcCompat="@drawable/smile" />
 
     <ImageView
         android:id="@+id/imageView21"
@@ -209,7 +209,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.516"
-        app:srcCompat="@drawable/상품추가" />
+        app:srcCompat="@drawable/plusitem" />
 
     <TextView
         android:id="@+id/textView41"
@@ -261,7 +261,7 @@
         android:layout_width="110dp"
         android:layout_height="37dp"
         android:background="#F0F0F0"
-        android:drawableRight="@drawable/새싹하트"
+        android:drawableRight="@drawable/leafheart"
         android:elevation="10dp"
         android:gravity="center"
         android:text="@string/후원"
