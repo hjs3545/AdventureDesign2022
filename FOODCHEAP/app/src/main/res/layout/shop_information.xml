@@ -58,15 +58,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.532"
             app:layout_constraintEnd_toEndOf="parent" android:id="@+id/view2"/>
-    <View
-            android:layout_width="50dp"
-            android:layout_height="2px"
-            android:background="@color/연두색"
-            android:layout_gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.09" app:layout_constraintVertical_bias="0.51"
-            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/view3"/>
     <TextView
             android:text="가게 정보"
             android:textColor="@color/black"
@@ -137,62 +128,62 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintHorizontal_bias="0.068" app:layout_constraintVertical_bias="0.053"/>
-    <TextView
-            android:text="유제품"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="17dp"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content" android:id="@+id/textView25"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.09" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.487"/>
-    <TextView
-            android:text="과일"
-            android:gravity="center"
-            android:textColor="#90000000"
-            android:textSize="14dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView16"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.316" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.487"/>
-    <TextView
-            android:text="채소"
-            android:gravity="center"
-            android:textColor="#90000000"
-            android:textSize="14dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView17"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.487"/>
-    <TextView
-            android:text="냉장·냉동"
-            android:gravity="center"
-            android:textColor="#90000000"
-            android:textSize="14dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView18"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.73" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.487"/>
-    <TextView
-            android:text="정육"
-            android:gravity="center"
-            android:textColor="#90000000"
-            android:textSize="14dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView26"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.92" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.487"/>
+
+    <RadioGroup
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.49"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="206dp"
+            tools:layout_editor_absoluteX="143dp">
+        <RadioButton
+                android:text="유제품"
+                android:textStyle="bold"
+                android:checked="true"
+                android:textSize="20dp"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/select_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/dailyProduct" android:layout_weight="1"/>
+        <RadioButton
+                android:text="과일"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/select_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/fruit" android:layout_weight="1"/>
+        <RadioButton
+                android:text="채소"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/select_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/vegetable" android:layout_weight="1"/>
+        <RadioButton
+                android:text="냉장·냉동"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/select_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/frozen" android:layout_weight="1"/>
+        <RadioButton
+                android:text="정육"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/select_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" android:id="@+id/meat" android:layout_weight="1"/>
+    </RadioGroup>
 
     <androidx.recyclerview.widget.RecyclerView android:layout_height="380dp"
-              android:layout_weight="1" android:id="@+id/RecyclerViewCatalog"
-              android:layout_width="match_parent" android:background="@color/white"
-              app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-              app:layout_constraintBottom_toBottomOf="parent"
-              app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
-              app:layout_constraintVertical_bias="1.0"/>
+                                               android:layout_weight="1" android:id="@+id/RecyclerViewCatalog"
+                                               android:layout_width="match_parent" android:background="@color/white"
+                                               app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                                               app:layout_constraintBottom_toBottomOf="parent"
+                                               app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.0"
+                                               app:layout_constraintVertical_bias="1.0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

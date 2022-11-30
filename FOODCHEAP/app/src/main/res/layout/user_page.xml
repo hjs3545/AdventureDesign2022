@@ -1,207 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:background="@color/white"
-              android:layout_height="match_parent" android:id="@+id/convenience_store">
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:padding="20dp">
-        <ImageView
-                android:src="@drawable/user_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp" android:id="@+id/imageView4"/>
-        <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-            <TextView
-                    android:text="어서오세요"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:id="@+id/textView7" android:paddingLeft="20dp" android:textSize="8sp"/>
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:id="@+id/textView8" android:text="김푸드 님(구매자)" android:paddingLeft="15dp"/>
-            <TextView
-                    android:text="충남대학교 공과대학 5호관"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_height="wrap_content" android:id="@+id/textView9" android:paddingLeft="15dp"/>
-        </LinearLayout>
-        <ImageButton
-                android:layout_width="40dp"
-                android:background="@color/white"
-                android:layout_height="40dp" app:srcCompat="@drawable/cart" android:id="@+id/goto_cart"
-                android:layout_weight="0" android:layout_marginLeft="20dp"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
-        <ImageButton
-                android:layout_width="40dp"
-                android:background="@color/white"
-                android:layout_height="40dp" app:srcCompat="@drawable/goto_mypage"
-                android:id="@+id/goto_mypage" android:layout_weight="0"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
-        <ImageButton
-                android:layout_width="40dp"
-                android:background="@color/white"
-                android:layout_height="40dp" app:srcCompat="@drawable/user_change"
-                android:id="@+id/user_change" android:layout_weight="0"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
-    </LinearLayout>
-    <SearchView
-            android:layout_width="match_parent"
-            android:background="@color/white"
-            android:focusable="false"
-            android:queryHint="내 주변 가게 검색, 음식 검색"
-            android:layout_height="30dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
-            android:layout_marginTop="15dp" android:backgroundTint="#E7E7E7"/>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+>
+
+    <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="60dp"
+            android:layout_height="60dp" app:srcCompat="@drawable/user_image" android:id="@+id/imageView10"
+            app:layout_constraintHorizontal_bias="0.06" app:layout_constraintVertical_bias="0.03"/>
+    <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="어서오세요"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView50"
+            app:layout_constraintHorizontal_bias="0.261" app:layout_constraintVertical_bias="0.035"/>
+    <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="충남대학교 공과대학 5호관"
+            android:textColor="@color/black"
+            android:textSize="11dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView52"
+            app:layout_constraintHorizontal_bias="0.322" app:layout_constraintVertical_bias="0.094"/>
+    <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="김푸드 님(구매자)"
+            android:textColor="@color/black"
+            android:textSize="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView51"
+            app:layout_constraintHorizontal_bias="0.324" app:layout_constraintVertical_bias="0.062"/>
+    <Button
+            android:background="@drawable/user_change"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="17dp"
+            android:layout_height="17dp" android:id="@+id/userChangeButton"
+            app:layout_constraintHorizontal_bias="0.92" app:layout_constraintVertical_bias="0.065"/>
+
+    <EditText
+            android:background="@drawable/search_background"
+            android:hint="내 주변 가게, 음식 검색"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:textColorHint="#30000000"
+            android:drawableLeft="@drawable/magnifying_glass_left"
+            android:drawableRight="@drawable/select_options_right"
+            android:drawablePadding="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="350dp" android:layout_height="50dp" app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintVertical_bias="0.146"/>
     <RadioGroup
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:weightSum="4" android:layout_marginTop="20dp">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.23"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="206dp"
+            tools:layout_editor_absoluteX="143dp">
         <RadioButton
                 android:text="식료품"
+                android:textStyle="bold"
                 android:checked="true"
+                android:textSize="20dp"
+                android:button="@null"
+                android:gravity="center"
+                android:textColor="@drawable/select_radio_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/grocery" android:buttonTint="#000000"
-                tools:ignore="TouchTargetSizeCheck" android:textColor="@color/black" android:layout_weight="1"/>
+                android:layout_height="match_parent" android:id="@+id/grocery" android:layout_weight="1"/>
         <RadioButton
                 android:text="패스트푸드"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/select_radio_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/fastfood"
-                tools:ignore="TouchTargetSizeCheck" android:buttonTint="#000000" android:textColor="@color/black"
-                android:layout_weight="1"/>
+                android:layout_height="match_parent" android:id="@+id/fastfood" android:layout_weight="1"/>
         <RadioButton
                 android:text="일반음식점"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/select_radio_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:ignore="TouchTargetSizeCheck" android:buttonTint="#000000" android:textColor="@color/black"
-                android:layout_weight="1" android:id="@+id/general_restaurant"/>
+                android:layout_height="match_parent" android:id="@+id/normal" android:layout_weight="1"/>
         <RadioButton
                 android:text="편의점"
+                android:gravity="center"
+                android:button="@null"
+                android:textColor="@drawable/select_radio_button"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/radioButton4"
-                android:buttonTint="#000000" tools:ignore="TouchTargetSizeCheck" android:textColor="@color/black"
-                android:layout_weight="1"/>
+                android:layout_height="match_parent" android:id="@+id/convenience" android:layout_weight="1"/>
     </RadioGroup>
     <TextView
             android:text="쿠키네 식료품"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView4" android:textColor="@color/black"
-            android:padding="15dp" android:textSize="12sp"/>
-    <ScrollView
-            android:text="0"
+            android:layout_height="wrap_content" android:id="@+id/shopName"
+            app:layout_constraintHorizontal_bias="0.09" app:layout_constraintVertical_bias="0.285"/>
+    <TextView
+            android:text="근처 가게"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="280dp">
+            android:layout_height="wrap_content" android:id="@+id/textView54"
+            app:layout_constraintHorizontal_bias="0.09" app:layout_constraintVertical_bias="0.745"/>
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical">
-            <TextView
-                    android:text="TextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView11"/>
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                <ImageButton
-                        android:layout_width="wrap_content"
-                        android:background="@color/white"
-                        android:layout_height="wrap_content" app:srcCompat="@drawable/milk_image"
-                        android:id="@+id/milkimage" android:layout_weight="1"
-                        tools:ignore="SpeakableTextPresentCheck"/>
-                <ImageButton
-                        android:layout_width="wrap_content"
-                        android:background="@color/white"
-                        android:layout_height="wrap_content" app:srcCompat="@drawable/tofu_image"
-                        android:id="@+id/imageButton2" android:layout_weight="1"
-                        tools:ignore="SpeakableTextPresentCheck"/>
-            </LinearLayout>
-            <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                <ImageButton
-                        android:layout_width="wrap_content"
-                        android:background="@color/white"
-                        android:layout_height="wrap_content" app:srcCompat="@drawable/milk_image"
-                        android:layout_weight="1"
-                        tools:ignore="SpeakableTextPresentCheck" android:id="@+id/imageButton3"/>
-                <ImageButton
-                        android:layout_width="wrap_content"
-                        android:background="@color/white"
-                        android:layout_height="wrap_content" app:srcCompat="@drawable/tofu_image"
-                        android:id="@+id/imageButton4" android:layout_weight="1"
-                        tools:ignore="SpeakableTextPresentCheck"/>
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-    <LinearLayout
-            android:orientation="horizontal"
+    <TextView
+            android:text="더 보기"
+            android:textColor="#80000000"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        <TextView
-                android:text="근처가게 "
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:id="@+id/textView12" android:textColor="@color/black"
-                android:padding="10dp"/>
-        <Button
-                android:text="더보기"
-                android:layout_width="wrap_content"
-                android:background="@color/white"
-                android:textColor="@color/black"
-                android:layout_height="wrap_content" android:id="@+id/plus" android:layout_weight="1"
-                android:layout_marginLeft="200dp"/>
-    </LinearLayout>
-    <LinearLayout
+            android:layout_height="wrap_content" android:id="@+id/textView55"
+            app:layout_constraintHorizontal_bias="0.912" app:layout_constraintVertical_bias="0.747"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="300dp"
+            android:layout_weight="1" android:id="@+id/RecyclerViewMain"
+            android:layout_width="350dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.517" app:layout_constraintHorizontal_bias="0.488"/>
+    <RadioGroup
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:background="@color/white"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/around_store"
-                android:id="@+id/around_store1" android:layout_weight="1" tools:ignore="SpeakableTextPresentCheck"/>
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:background="@color/white"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/around_store2"
-                android:id="@+id/around_store2" android:layout_weight="1" tools:ignore="SpeakableTextPresentCheck"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:background="@color/연두색"
-            android:layout_height="40dp" android:layout_marginTop="20dp" android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:background="@color/연두색"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/home" android:id="@+id/goto_home"
-                android:layout_weight="1" tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-                android:layout_marginTop="10dp"/>
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:background="@color/연두색"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/wallet" android:id="@+id/goto_wallet"
-                android:layout_weight="1" android:layout_marginTop="10dp"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:background="@color/연두색"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/shopping_bascket"
-                android:id="@+id/goto_bascket" android:layout_weight="1" android:layout_marginTop="10dp"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
-        <ImageButton
-                android:layout_width="wrap_content"
-                android:background="@color/연두색"
-                android:layout_height="wrap_content" app:srcCompat="@drawable/mypage" android:id="@+id/goto_mypage2"
-                android:layout_weight="1" android:layout_marginTop="10dp"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"/>
-    </LinearLayout>
-</LinearLayout>
+            android:background="@drawable/menu_bar"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            android:layout_width="360dp"
+            android:layout_height="60dp" tools:layout_editor_absoluteY="206dp"
+            tools:layout_editor_absoluteX="143dp">
+        <RadioButton
+                android:checked="true"
+                android:drawableLeft="@drawable/home_selector"
+                android:paddingLeft="20dp"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/home" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/card_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/cards" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/shoppingcart_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/shopping_cart" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/mypage_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/mypage" android:layout_weight="1"/>
+    </RadioGroup>
+    <Button
+            android:background="@drawable/cnumart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="170dp"
+            android:layout_height="70dp" android:id="@+id/button10"
+            app:layout_constraintHorizontal_bias="0.13" app:layout_constraintVertical_bias="0.845"/>
+    <Button
+            android:background="@drawable/skyfruit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="170dp"
+            android:layout_height="70dp" android:id="@+id/button11"
+            app:layout_constraintHorizontal_bias="0.923" app:layout_constraintVertical_bias="0.844"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

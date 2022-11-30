@@ -26,7 +26,7 @@ public class productDetail extends AppCompatActivity {
         String Explain = intent.getExtras().getString("Explain");
         String Date = intent.getExtras().getString("Date");
         int Stock = intent.getExtras().getInt("Stock");
-
+        String Case = intent.getExtras().getString("Case");
 
         TextView shopName = (TextView) findViewById(R.id.textViewShopName);
         ImageView image = (ImageView) findViewById(R.id.productImageView);
@@ -52,12 +52,23 @@ public class productDetail extends AppCompatActivity {
         Button buyButton = (Button) findViewById(R.id.buyButton);
         Button backButton = (Button) findViewById(R.id.backButton);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), shop_information.class);
-                startActivity(intent);
-            }
-        });
+        if (Case.equals("UserPage")) {
+            backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), user_page.class);
+                    startActivity(intent);
+                }
+            });
+        }
+        else if (Case.equals("ShopInformation")) {
+            backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), shop_information.class);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 }
