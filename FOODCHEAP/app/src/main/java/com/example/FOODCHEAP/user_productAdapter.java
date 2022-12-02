@@ -1,6 +1,7 @@
 package com.example.FOODCHEAP;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,10 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class user_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private List<product> ProductList;
+    List<product> ProductList;
+
+    user_productAdapter(List<product> list) {
+        ProductList = list;
+    }
 
     public interface OnItemClickEventListener {
         void onItemClick(View v, int position);
@@ -23,9 +29,6 @@ public class user_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         itemClickListener = listener;
     }
 
-    public user_productAdapter(List<product> list) {
-        ProductList = list;
-    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -39,19 +42,19 @@ public class user_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        ((user_productAdapter.ViewHolder) viewHolder).image.setImageResource(ProductList.get(position).getImageID());
-        ((user_productAdapter.ViewHolder) viewHolder).name.setText(ProductList.get(position).getName());
-        ((user_productAdapter.ViewHolder) viewHolder).price1.setText(ProductList.get(position).getPrice1());
-        ((user_productAdapter.ViewHolder) viewHolder).price2.setText(ProductList.get(position).getPrice2());
-        ((user_productAdapter.ViewHolder) viewHolder).date.setText(ProductList.get(position).getDate());
-        ((user_productAdapter.ViewHolder) viewHolder).discountRate.setText(ProductList.get(position).getDiscountRate());
+        ((ViewHolder)viewHolder).image.setImageResource(ProductList.get(position).getImageID());
+        ((ViewHolder)viewHolder).name.setText(ProductList.get(position).getName());
+        ((ViewHolder)viewHolder).price2.setText(ProductList.get(position).getPrice2());
+        ((ViewHolder)viewHolder).price1.setText(ProductList.get(position).getPrice1());
+        ((ViewHolder)viewHolder).date.setText(ProductList.get(position).getDate());
+        ((ViewHolder)viewHolder).discountRate.setText(ProductList.get(position).getDiscountRate());
     }
 
     @Override
     public int getItemCount() {
         return ProductList.size();
     }
-    private class ViewHolder extends RecyclerView.ViewHolder {
+    static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
         TextView name;
         TextView price1;

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RadioGroup
+            android:orientation="horizontal"
+            android:background="@drawable/menu_bar"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            android:layout_width="360dp"
+            android:layout_height="60dp" tools:layout_editor_absoluteY="206dp"
+            tools:layout_editor_absoluteX="143dp">
+        <RadioButton
+                android:drawableLeft="@drawable/home_selector"
+                android:paddingLeft="20dp"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/walletToHome" android:layout_weight="1"/>
+        <RadioButton
+                android:checked="true"
+                android:drawableLeft="@drawable/card_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/wallet" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/shoppingcart_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/walletToShoppingCart" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/mypage_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/walletToMyPage" android:layout_weight="1"/>
+    </RadioGroup>
+    <TextView
+            android:text="김푸드님의 지갑"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="23dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView16"
+            app:layout_constraintHorizontal_bias="0.104" app:layout_constraintVertical_bias="0.05"/>
+    <Button
+            android:background="@drawable/add_card"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="23dp"
+            android:layout_height="23dp" android:id="@+id/button6"
+            app:layout_constraintHorizontal_bias="0.924" app:layout_constraintVertical_bias="0.053"/>
+
+    <Button
+            android:background="@drawable/delete_allcards"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="25dp"
+            android:layout_height="25dp" android:id="@+id/deleteAllCards"
+            app:layout_constraintHorizontal_bias="0.816" app:layout_constraintVertical_bias="0.051"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="570dp"
+            android:layout_weight="1" android:id="@+id/CardRecyclerView"
+            android:layout_width="350dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.447" app:layout_constraintHorizontal_bias="0.488"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

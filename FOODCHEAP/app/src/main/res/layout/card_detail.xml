@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+            android:layout_width="330dp"
+            android:layout_height="2px"
+            android:background="#60000000"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.492" app:layout_constraintVertical_bias="0.171"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/view6"/>
+    <View
+            android:layout_width="330dp"
+            android:layout_height="2px"
+            android:background="#60000000"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.492" app:layout_constraintVertical_bias="0.471"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/view7"/>
+    <Button
+            android:background="@drawable/final_back_button"
+            android:drawableLeft="@drawable/back_button"
+            android:paddingLeft="11dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" android:id="@+id/backButton5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.068" app:layout_constraintVertical_bias="0.053"/>
+    <RadioGroup
+            android:orientation="horizontal"
+            android:background="@drawable/menu_bar"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            android:layout_width="360dp"
+            android:layout_height="60dp" tools:layout_editor_absoluteY="206dp"
+            tools:layout_editor_absoluteX="143dp">
+        <RadioButton
+                android:drawableLeft="@drawable/home_selector"
+                android:paddingLeft="20dp"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/walletToHome" android:layout_weight="1"/>
+        <RadioButton
+                android:checked="true"
+                android:drawableLeft="@drawable/card_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/wallet" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/shoppingcart_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/walletToShoppingCart" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/mypage_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/walletToMyPage" android:layout_weight="1"/>
+    </RadioGroup>
+
+    <TextView
+            android:text="카드정보"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="23dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView16"
+            app:layout_constraintHorizontal_bias="0.238" app:layout_constraintVertical_bias="0.053"/>
+    <TextView
+            android:text="최근 거래내역"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView69"
+            app:layout_constraintHorizontal_bias="0.118" app:layout_constraintVertical_bias="0.444"/>
+    <TextView
+            android:text="상세정보"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="17dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView70"
+            app:layout_constraintHorizontal_bias="0.103" app:layout_constraintVertical_bias="0.138"/>
+    <TextView
+            android:text="카드이름"
+            android:textColor="@color/연두색1"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView71"
+            app:layout_constraintHorizontal_bias="0.103" app:layout_constraintVertical_bias="0.21"/>
+    <TextView
+            android:text="--카드이름--"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewCardName"
+            app:layout_constraintHorizontal_bias="0.776" app:layout_constraintVertical_bias="0.21"/>
+    <TextView
+            android:text="--카드번호--"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewCardNumber"
+            app:layout_constraintHorizontal_bias="0.773" app:layout_constraintVertical_bias="0.265"/>
+    <TextView
+            android:text="--유효기한--"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewValidThru"
+            app:layout_constraintHorizontal_bias="0.773" app:layout_constraintVertical_bias="0.32"/>
+    <TextView
+            android:text="--CVC--"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content" android:id="@+id/textViewCVC"
+            app:layout_constraintHorizontal_bias="0.773" app:layout_constraintVertical_bias="0.374"/>
+    <TextView
+            android:text="카드번호"
+            android:textColor="@color/연두색1"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView72"
+            app:layout_constraintHorizontal_bias="0.103" app:layout_constraintVertical_bias="0.265"/>
+    <TextView
+            android:text="유효기한"
+            android:textColor="@color/연두색1"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView73"
+            app:layout_constraintHorizontal_bias="0.103" app:layout_constraintVertical_bias="0.32"/>
+    <TextView
+            android:text="CVC"
+            android:textColor="@color/연두색1"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView74"
+            app:layout_constraintHorizontal_bias="0.103" app:layout_constraintVertical_bias="0.375"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="300dp"
+            android:layout_weight="1" android:id="@+id/CardRecyclerView"
+            android:layout_width="350dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.767" app:layout_constraintHorizontal_bias="0.488"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

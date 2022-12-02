@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:background="@color/white"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <Button
+            android:background="@drawable/final_back_button"
+            android:drawableLeft="@drawable/back_button"
+            android:paddingLeft="11dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" android:id="@+id/backButton2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.068" app:layout_constraintVertical_bias="0.053"/>
+    <TextView
+            android:text="카드 등록하기"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="23dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView18"
+            app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.053"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@drawable/addcardbackground"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="349dp"
+            android:layout_height="270dp"
+            app:layout_constraintVertical_bias="0.233">
+
+        <TextView
+                android:text="카드 세부정보"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView25"
+                app:layout_constraintHorizontal_bias="0.085" app:layout_constraintVertical_bias="0.075"/>
+
+        <EditText
+                android:hint="카드 이름"
+                android:background="@drawable/card_edittext"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textColorHint="#30000000"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/CardName"
+                android:layout_width="310dp" android:layout_height="50dp" app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintVertical_bias="0.25"/>
+        <EditText
+                android:hint="카드 번호"
+                android:background="@drawable/card_edittext"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textColorHint="#30000000"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/CardNumber"
+                android:layout_width="310dp" android:layout_height="50dp" app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintVertical_bias="0.54"/>
+        <EditText
+                android:hint="MM/YY"
+                android:background="@drawable/card_edittext"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textColorHint="#30000000"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/CardDate"
+                android:layout_width="170dp" android:layout_height="50dp" app:layout_constraintHorizontal_bias="0.106"
+                app:layout_constraintVertical_bias="0.9"/>
+        <EditText
+                android:hint="CVC"
+                android:background="@drawable/card_edittext"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textColorHint="#30000000"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/CardCVC"
+                android:layout_width="100dp" android:layout_height="50dp" app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintVertical_bias="0.9"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+            android:background="@drawable/registercard"
+            android:text="카드 등록하기"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="140dp"
+            android:layout_height="50dp" android:id="@+id/button12"
+            app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.559"/>
+    <RadioGroup
+            android:orientation="horizontal"
+            android:background="@drawable/menu_bar"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.97"
+            android:layout_width="360dp"
+            android:layout_height="60dp" tools:layout_editor_absoluteY="206dp"
+            tools:layout_editor_absoluteX="143dp">
+        <RadioButton
+                android:drawableLeft="@drawable/home_selector"
+                android:paddingLeft="20dp"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/addCardToHome" android:layout_weight="1"/>
+        <RadioButton
+                android:checked="true"
+                android:drawableLeft="@drawable/card_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/addCard" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/shoppingcart_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/addCardToShoppingCart" android:layout_weight="1"/>
+        <RadioButton
+                android:drawableLeft="@drawable/mypage_selector"
+                android:paddingLeft="20dp"
+                android:gravity="center"
+                android:button="@null"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" android:id="@+id/addCardToMyPage" android:layout_weight="1"/>
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

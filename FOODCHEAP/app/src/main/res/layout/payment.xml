@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools" android:background="@color/white"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent">
+
+    <Button
+            android:background="@drawable/final_back_button"
+            android:drawableLeft="@drawable/back_button"
+            android:paddingLeft="11dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" android:id="@+id/backButton3"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.068" app:layout_constraintVertical_bias="0.053"/>
+    <TextView
+            android:text="결제금액"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView26"
+            app:layout_constraintHorizontal_bias="0.25" app:layout_constraintVertical_bias="0.054"/>
+    <TextView
+            android:text="0,000원"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView53"
+            app:layout_constraintHorizontal_bias="0.59" app:layout_constraintVertical_bias="0.043"/>
+
+    <RadioGroup
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:checkedButton="@+id/radioButton"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.493" app:layout_constraintVertical_bias="0.221">
+        <TextView
+                android:text="결제수단"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView57"
+        />
+        <RadioButton
+                android:text="카드로 결제"
+                android:textSize="16dp"
+                android:theme="@style/CustomRadioButton"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton"/>
+        <ImageView
+                android:layout_width="200dp"
+                android:paddingLeft="35dp"
+                android:layout_height="130dp" app:srcCompat="@drawable/blue_card" android:id="@+id/imageView11"/>
+        <TextView
+                android:text="변경하기"
+                android:textSize="12dp"
+                android:paddingLeft="37dp"
+                android:textColor="@color/연두색1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView58"/>
+        <RadioButton
+                android:text="카카오페이"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:theme="@style/CustomRadioButton"
+                android:layout_height="wrap_content" android:id="@+id/radioButton2"/>
+        <RadioButton
+                android:text="네이버페이"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:theme="@style/CustomRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton5"/>
+        <RadioButton
+                android:text="현금으로 결제"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:theme="@style/CustomRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton4"/>
+    </RadioGroup>
+    <RadioGroup
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/radioButton3"
+            app:layout_constraintVertical_bias="0.66"
+            app:layout_constraintHorizontal_bias="0.493">
+        <TextView
+                android:text="수령방법"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/textView59"/>
+        <RadioButton
+                android:text="픽업"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:theme="@style/CustomRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton3"/>
+        <RadioButton
+                android:text="배달"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:theme="@style/CustomRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/radioButton6"/>
+    </RadioGroup>
+    <TextView
+            android:text="요청사항"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content" android:id="@+id/textView61"
+            app:layout_constraintHorizontal_bias="0.493" app:layout_constraintVertical_bias="0.764"/>
+    <EditText
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/needs"
+            android:textColor="@color/black"
+            android:textColorHint="#50000000"
+            android:textSize="15dp"
+            android:hint="필요하신 것이 있다면 적어주세요!"
+            android:layout_width="310dp" android:layout_height="50dp" app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintVertical_bias="0.821"/>
+    <Button
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/pay_button"
+            android:layout_width="157dp"
+            android:layout_height="55dp" android:id="@+id/payButton"
+            app:layout_constraintVertical_bias="0.923"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

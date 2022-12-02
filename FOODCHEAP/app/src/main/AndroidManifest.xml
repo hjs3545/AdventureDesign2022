@@ -37,6 +37,12 @@
         <activity android:name=".shop_information"/>
         <activity android:name=".productDetail"/>
         <activity android:name=".register"/>
+        <activity android:name=".shopping_cart"/>
+        <activity android:name=".wallet"/>
+        <activity android:name=".addCard"/>
+        <activity android:name=".Payment"/>
+        <activity android:name=".CompletePayment"/>
+        <activity android:name=".CardDetail"/>
     </application>
     
     <uses-permission android:name="android.permission.INTERNET"/>

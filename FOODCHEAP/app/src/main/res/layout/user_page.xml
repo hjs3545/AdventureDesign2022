@@ -5,8 +5,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
->
+        tools:layout_editor_absoluteY="-74dp" tools:layout_editor_absoluteX="0dp">
 
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="#60000000"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.266"
+            app:layout_constraintEnd_toEndOf="parent" android:id="@+id/view3"/>
     <ImageView
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -188,21 +197,21 @@
                 android:gravity="center"
                 android:button="@null"
                 android:layout_width="60dp"
-                android:layout_height="match_parent" android:id="@+id/cards" android:layout_weight="1"/>
+                android:layout_height="match_parent" android:id="@+id/homeToWallet" android:layout_weight="1"/>
         <RadioButton
                 android:drawableLeft="@drawable/shoppingcart_selector"
                 android:paddingLeft="20dp"
                 android:gravity="center"
                 android:button="@null"
                 android:layout_width="60dp"
-                android:layout_height="match_parent" android:id="@+id/shopping_cart" android:layout_weight="1"/>
+                android:layout_height="match_parent" android:id="@+id/homeToShoppingCart" android:layout_weight="1"/>
         <RadioButton
                 android:drawableLeft="@drawable/mypage_selector"
                 android:paddingLeft="20dp"
                 android:gravity="center"
                 android:button="@null"
                 android:layout_width="60dp"
-                android:layout_height="match_parent" android:id="@+id/mypage" android:layout_weight="1"/>
+                android:layout_height="match_parent" android:id="@+id/homeToMyPage" android:layout_weight="1"/>
     </RadioGroup>
     <Button
             android:background="@drawable/cnumart"

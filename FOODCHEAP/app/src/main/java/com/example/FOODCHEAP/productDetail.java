@@ -1,20 +1,34 @@
 package com.example.FOODCHEAP;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class productDetail extends AppCompatActivity {
+    public cart_productAdapter ADAPTER;
+    public List<product> ProductList;
+    DBHelper dbHelper;
+    SQLiteDatabase database;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_detail);
+
+        dbHelper = new DBHelper(this, 1);
 
         Intent intent = getIntent();
         String ShopName = intent.getExtras().getString("ShopName");
@@ -70,5 +84,14 @@ public class productDetail extends AppCompatActivity {
                 }
             });
         }
+
+        Button AddButton = (Button) findViewById(R.id.addButton);
+        AddButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                database = dbHelper.getWritableDatabase();
+                dbHelper.insert(ImageID, ProductName, Price2);
+                Toast.makeText(getApplicationContext(), "장바구니에 추가됨", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

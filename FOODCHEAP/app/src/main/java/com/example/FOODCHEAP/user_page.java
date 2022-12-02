@@ -45,6 +45,25 @@ public class user_page extends AppCompatActivity {
             }
         });
 
+        RadioButton shoppingCart = (RadioButton) findViewById(R.id.homeToShoppingCart);
+        shoppingCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), shopping_cart.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+            }
+        });
+
+        RadioButton wallet = (RadioButton) findViewById(R.id.homeToWallet);
+        wallet.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), wallet.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+            }
+        });
+
         RadioButton r1 = (RadioButton) findViewById(R.id.grocery);
         RadioButton r2 = (RadioButton) findViewById(R.id.fastfood);
         RadioButton r3 = (RadioButton) findViewById(R.id.normal);
@@ -106,11 +125,11 @@ public class user_page extends AppCompatActivity {
     private void AddData() {
         ProductList = new ArrayList<>();
 
-        ProductList.add(new product("쿠키네 식료품", R.drawable.seoul_milk, "3,200원", "2,200원", "-31%", "서울우유 1.8L", "체세포수 1등급, 세균수 1A", "~12/10", 10));
-        ProductList.add(new product("쿠키네 식료품", R.drawable.shred_cheese,  "6,900원", "5,000원", "-28%", "슈레드 모짜렐라 300g", "진한 풍미와 쫄깃한 식감", "~12/23", 7));
-        ProductList.add(new product("쿠키네 식료품", R.drawable.butter, "6,100원", "4,500원", "-27%", "가염 버터 240g", "신선한 국산 원유로 만든 국산 유크림 100%의 고품격 버터", "~1/3", 14));
-        ProductList.add(new product("쿠키네 식료품", R.drawable.yogurt,  "2,980원", "2,000원", "-33%", "빙그레 요플레 85g x 4", "2000억 프로바이오틱스", "~12/12", 4));
-        ProductList.add(new product("쿠키네 식료품", R.drawable.bananamilk, "9,800원", "7,350원", "-25%", "빙그레 바나나맛 우유 8개입", "기분 좋은 달콤함과 단지 모양의 용기", "~12/5", 12));
+        ProductList.add(new product("쿠키네 식료품", R.drawable.seoul_milk, 3200, 2200, "-31%", "서울우유 1.8L", "체세포수 1등급, 세균수 1A", "~12/10", 10));
+        ProductList.add(new product("쿠키네 식료품", R.drawable.shred_cheese,  6900, 5000, "-28%", "슈레드 모짜렐라 300g", "진한 풍미와 쫄깃한 식감", "~12/23", 7));
+        ProductList.add(new product("쿠키네 식료품", R.drawable.butter, 6100, 4500, "-27%", "가염 버터 240g", "신선한 국산 원유로 만든 국산 유크림 100%의 고품격 버터", "~1/3", 14));
+        ProductList.add(new product("쿠키네 식료품", R.drawable.yogurt,  2980, 2000, "-33%", "빙그레 요플레 85g x 4", "2000억 프로바이오틱스", "~12/12", 4));
+        ProductList.add(new product("쿠키네 식료품", R.drawable.bananamilk, 9800, 7350, "-25%", "빙그레 바나나맛 우유 8개입", "기분 좋은 달콤함과 단지 모양의 용기", "~12/5", 12));
 
         ADAPTER = new user_productAdapter(ProductList);
         ADAPTER.setOnItemClickListener(new user_productAdapter.OnItemClickEventListener() {
@@ -134,6 +153,4 @@ public class user_page extends AppCompatActivity {
             }
         });
     }
-
-
 }
