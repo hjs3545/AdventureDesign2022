@@ -16,7 +16,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE IF NOT EXISTS PRODUCT (ID INTEGER PRIMARY KEY AUTOINCREMENT, IMAGE INTEGER, NAME TEXT, PRICE TEXT)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS PRODUCT (ID INTEGER PRIMARY KEY AUTOINCREMENT, IMAGE INTEGER, NAME TEXT, PRICE INTEGER)");
     }
 
     @Override
@@ -34,7 +34,7 @@ public class DBHelper extends SQLiteOpenHelper {
             int id = cursor.getInt(0);
             int image = cursor.getInt(1);
             String name = cursor.getString(2);
-            String price = cursor.getString(3);
+            int price = cursor.getInt(3);
 
             list.add(new product(id, image, name, price));
         }
@@ -42,7 +42,7 @@ public class DBHelper extends SQLiteOpenHelper {
         return list;
     }
 
-    public long insert(int image, String name, String price) {
+    public long insert(int image, String name, int price) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("image", image);

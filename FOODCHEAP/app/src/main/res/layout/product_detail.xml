@@ -134,27 +134,7 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView38"
-            app:layout_constraintHorizontal_bias="0.8" app:layout_constraintVertical_bias="0.731"/>
-    <TextView
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:text="개"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView39"
-            app:layout_constraintHorizontal_bias="0.92" app:layout_constraintVertical_bias="0.731"/>
-    <TextView
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            android:text="N"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="16dp"
-            android:layout_width="21dp"
-            android:layout_height="wrap_content" android:id="@+id/textViewNumber"
-            app:layout_constraintHorizontal_bias="0.875" app:layout_constraintVertical_bias="0.731"/>
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" android:id="@+id/stock"
+            app:layout_constraintHorizontal_bias="0.961" app:layout_constraintVertical_bias="0.734"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

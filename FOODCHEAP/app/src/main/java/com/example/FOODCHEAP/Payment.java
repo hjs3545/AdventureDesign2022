@@ -5,8 +5,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.text.DecimalFormat;
 
 public class Payment extends AppCompatActivity {
     DBHelper dbHelper;
@@ -16,7 +19,14 @@ public class Payment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment);
 
+        DecimalFormat decFormat = new DecimalFormat("###,###");
+        Intent intent = getIntent();
+        int TotalPrice = intent.getExtras().getInt("TotalPrice");
+
         dbHelper = new DBHelper(this, 1);
+
+        TextView totalPrice = (TextView) findViewById(R.id.TotalPrice2);
+        totalPrice.setText(decFormat.format(TotalPrice) + "원");
 
         Button backButton = (Button) findViewById(R.id.backButton3);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +43,7 @@ public class Payment extends AppCompatActivity {
                 database = dbHelper.getWritableDatabase();
                 dbHelper.onUpgrade(database,1, 2);
                 Intent intent = new Intent(getApplicationContext(), CompletePayment.class);
+                intent.putExtra("TotalPrice", TotalPrice);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
             }

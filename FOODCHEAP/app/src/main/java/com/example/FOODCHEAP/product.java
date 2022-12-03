@@ -3,7 +3,6 @@ package com.example.FOODCHEAP;
 import java.text.DecimalFormat;
 
 public class product {
-    DecimalFormat decFormat = new DecimalFormat("###,###");
     private int id;
     private String shopName;
     private int imageID;
@@ -14,7 +13,6 @@ public class product {
     private String explain;
     private String date;
     private int stock;
-    private String PRICE2;
 
     public product(String shopName, int imageID, int price1, int price2, String discountRate, String name, String explain, String date, int stock) {
         this.shopName = shopName;
@@ -28,10 +26,10 @@ public class product {
         this.stock = stock;
     }
 
-    public product(int id, int imageID, String name, String PRICE2) {
+    public product(int id, int imageID, String name, int price2) {
         this.id = id;
         this.imageID = imageID;
-        this.PRICE2 = PRICE2;
+        this.price2 = price2;
         this.name = name;
     }
 
@@ -46,21 +44,11 @@ public class product {
         return imageID;
     }
 
-    public String getPrice1() {
-        String str = decFormat.format(price1) + "원";
-        return str;
+    public int getPrice1() {
+        return price1;
     }
 
-    public String getPrice2() {
-        String str= decFormat.format(price2) + "원";
-        return str;
-    }
-
-    public String GETPRICE2() {
-        return PRICE2;
-    }
-
-    public int GetPrice2() {
+    public int getPrice2() {
         return price2;
     }
     public String getDiscountRate() {

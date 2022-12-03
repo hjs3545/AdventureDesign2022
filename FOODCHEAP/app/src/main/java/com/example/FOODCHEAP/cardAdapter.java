@@ -1,6 +1,7 @@
 package com.example.FOODCHEAP;
 
 import android.content.Context;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +38,8 @@ public class cardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-        ((ViewHolder) viewHolder).cardnumber.setText(CardList.get(position).getCardNumber());
-        ((ViewHolder) viewHolder).validthru.setText(CardList.get(position).getValidThru());
+        ((ViewHolder) viewHolder).bluecardnumber.setText(CardList.get(position).getCardNumber());
+        ((ViewHolder) viewHolder).bluevalidthru.setText(CardList.get(position).getValidThru());
     }
 
     public int getItemCount() {
@@ -46,14 +47,14 @@ public class cardAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     }
 
     private class ViewHolder extends RecyclerView.ViewHolder {
-        TextView cardnumber;
-        TextView validthru;
+        TextView bluecardnumber;
+        TextView bluevalidthru;
 
         ViewHolder(View itemView, final OnItemClickEventListener itemClickEventListener) {
             super(itemView);
 
-            cardnumber = itemView.findViewById(R.id.bluecardNumber);
-            validthru = itemView.findViewById(R.id.bluecardValid);
+            bluecardnumber = itemView.findViewById(R.id.bluecardNumber);
+            bluevalidthru = itemView.findViewById(R.id.bluecardValid);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {

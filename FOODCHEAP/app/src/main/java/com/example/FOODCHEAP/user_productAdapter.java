@@ -9,11 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class user_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     List<product> ProductList;
+    DecimalFormat decFormat = new DecimalFormat("###,###");
 
     user_productAdapter(List<product> list) {
         ProductList = list;
@@ -44,8 +46,8 @@ public class user_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         ((ViewHolder)viewHolder).image.setImageResource(ProductList.get(position).getImageID());
         ((ViewHolder)viewHolder).name.setText(ProductList.get(position).getName());
-        ((ViewHolder)viewHolder).price2.setText(ProductList.get(position).getPrice2());
-        ((ViewHolder)viewHolder).price1.setText(ProductList.get(position).getPrice1());
+        ((ViewHolder)viewHolder).price1.setText(decFormat.format(ProductList.get(position).getPrice1()) + "원");
+        ((ViewHolder)viewHolder).price2.setText(decFormat.format(ProductList.get(position).getPrice2()) + "원");
         ((ViewHolder)viewHolder).date.setText(ProductList.get(position).getDate());
         ((ViewHolder)viewHolder).discountRate.setText(ProductList.get(position).getDiscountRate());
     }

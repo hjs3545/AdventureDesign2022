@@ -42,8 +42,16 @@ public class shopping_cart extends AppCompatActivity {
         TextView productCount = (TextView) findViewById(R.id.ProductCount);
         productCount.setText(adapter.getItemCount() + "개의 항목");
 
-        //TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
-        //totalPrice.setText(decFormat.format(TotalPrice) + "원");
+        TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
+        totalPrice.setText(decFormat.format(adapter.getTotalPrice()) + "원");
+
+        TextView shopName = (TextView) findViewById(R.id.shoppingCartShopName);
+        if (adapter.getItemCount() == 0) {
+            shopName.setText("");
+        }
+        else {
+            shopName.setText("쿠키네 식료품");
+        }
 
         Button clearShoppingCart = (Button) findViewById(R.id.button13);
         clearShoppingCart.setOnClickListener(new View.OnClickListener() {
@@ -66,6 +74,7 @@ public class shopping_cart extends AppCompatActivity {
             BuyNow.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), Payment.class);
+                    intent.putExtra("TotalPrice", adapter.getTotalPrice());
                     startActivity(intent);
                     overridePendingTransition(0, 0);
                 }
