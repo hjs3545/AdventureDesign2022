@@ -31,8 +31,10 @@
         <activity android:name=".explain2"/>
         <activity android:name=".explain3"/>
         <activity android:name=".explain4"/>
-        <activity android:name=".login"/>
-        <activity android:name=".user_page"/>
+        <activity android:name=".login"
+                  android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".user_page"
+                  android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".milk"/>
         <activity android:name=".shop_information"/>
         <activity android:name=".productDetail"/>

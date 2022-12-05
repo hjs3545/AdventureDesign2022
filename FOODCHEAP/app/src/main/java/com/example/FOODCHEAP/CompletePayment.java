@@ -28,6 +28,7 @@ public class CompletePayment extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), user_page.class);
                 startActivity(intent);
+                overridePendingTransition(0, 0);
             }
         });
     }

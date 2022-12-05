@@ -24,34 +24,14 @@ public class addCard extends AppCompatActivity {
 
         dbHelper = new CardDBHelper(this, 1);
 
-        RadioButton home = (RadioButton) findViewById(R.id.addCardToHome);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), user_page.class);
-                startActivity(intent);
-                overridePendingTransition(0, 0);
-            }
-        });
-
-        RadioButton shoppingCart = (RadioButton) findViewById(R.id.addCardToShoppingCart);
-        shoppingCart.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), shopping_cart.class);
-                startActivity(intent);
-                overridePendingTransition(0, 0);
-            }
-        });
-
         Button backButton = (Button) findViewById(R.id.backButton2);
         backButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), wallet.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0);
+                overridePendingTransition(R.anim.left_in, R.anim.slow_right_out);
             }
         });
-
 
         EditText CardName = (EditText) findViewById(R.id.CardName);
         EditText CardNumber = (EditText) findViewById(R.id.CardNumber);
@@ -64,7 +44,7 @@ public class addCard extends AppCompatActivity {
                 dbHelper.insert(CardName.getText().toString(), CardNumber.getText().toString(), CardDate.getText().toString(), Integer.parseInt(CVC.getText().toString().trim()));
                 Intent intent = new Intent(getApplicationContext(), wallet.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0);
+                overridePendingTransition(R.anim.left_in, R.anim.slow_right_out);
                 Toast.makeText(getApplicationContext(), "카드 추가됨", Toast.LENGTH_SHORT).show();
             }
         });

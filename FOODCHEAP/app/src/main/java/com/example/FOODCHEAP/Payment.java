@@ -33,7 +33,7 @@ public class Payment extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), shopping_cart.class);
                 startActivity(intent);
-                overridePendingTransition(0, 0);
+                overridePendingTransition(R.anim.left_in, R.anim.slow_right_out);
             }
         });
 
@@ -45,7 +45,7 @@ public class Payment extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), CompletePayment.class);
                 intent.putExtra("TotalPrice", TotalPrice);
                 startActivity(intent);
-                overridePendingTransition(0, 0);
+                overridePendingTransition(R.anim.none, R.anim.none);
             }
         });
     }

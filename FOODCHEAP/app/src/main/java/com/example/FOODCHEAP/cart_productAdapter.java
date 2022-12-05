@@ -1,6 +1,8 @@
 package com.example.FOODCHEAP;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.text.DecimalFormat;
@@ -17,6 +20,8 @@ import java.util.List;
 
 public class cart_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private List<product> ProductList;
+    DBHelper dbHelper;
+    Context context;
     DecimalFormat decFormat = new DecimalFormat("###,###");
 
     public interface OnItemClickEventListener {
@@ -29,13 +34,14 @@ public class cart_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         itemClickListener = listener;
     }
 
-    public cart_productAdapter(List<product> list) {
+    public cart_productAdapter(List<product> list, DBHelper dbHelper) {
         ProductList = list;
+        this.dbHelper = dbHelper;
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
+        context = parent.getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.product_in_cart, parent, false);
         cart_productAdapter.ViewHolder viewHolder = new cart_productAdapter.ViewHolder(view, itemClickListener);
@@ -49,14 +55,21 @@ public class cart_productAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         ((cart_productAdapter.ViewHolder) viewHolder).name.setText(ProductList.get(position).getName());
         ((cart_productAdapter.ViewHolder) viewHolder).price.setText(decFormat.format(ProductList.get(position).getPrice2()) + "원");
 
-        /* ((cart_productAdapter.ViewHolder) viewHolder).delete.setTag(position);
+        ((cart_productAdapter.ViewHolder) viewHolder).delete.setTag(position);
         ((cart_productAdapter.ViewHolder) viewHolder).delete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 int pos = (int)v.getTag();
-                ProductList.remove(pos);
+                int id = ProductList.get(pos).getId();
+                dbHelper.delete(id);
                 notifyDataSetChanged();
+                Toast.makeText(context, "장바구니에서 제거됨", Toast.LENGTH_SHORT).show();
+                Intent intent = ((Activity)context).getIntent();
+                ((Activity)context).finish();
+                ((Activity)context).overridePendingTransition(0, 0);
+                ((Activity)context).startActivity(intent);
+                ((Activity)context).overridePendingTransition(0, 0);
             }
-        });  */
+        });
     }
 
     @Override

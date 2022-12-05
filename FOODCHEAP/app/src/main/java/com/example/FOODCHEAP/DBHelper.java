@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBHelper extends SQLiteOpenHelper {
+    List<Integer> ImageList = new ArrayList<>();
+    List<Integer> Count = new ArrayList<>();
+
     public DBHelper(Context context, int version) {
         super(context, "product.db", null, version);
     }
@@ -38,7 +41,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
             list.add(new product(id, image, name, price));
         }
-
         return list;
     }
 

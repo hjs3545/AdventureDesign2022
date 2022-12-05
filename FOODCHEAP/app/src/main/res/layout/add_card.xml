@@ -100,47 +100,4 @@
             android:layout_width="140dp"
             android:layout_height="50dp" android:id="@+id/button12"
             app:layout_constraintHorizontal_bias="0.498" app:layout_constraintVertical_bias="0.559"/>
-    <RadioGroup
-            android:orientation="horizontal"
-            android:background="@drawable/menu_bar"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.97"
-            android:layout_width="360dp"
-            android:layout_height="60dp" tools:layout_editor_absoluteY="206dp"
-            tools:layout_editor_absoluteX="143dp">
-        <RadioButton
-                android:drawableLeft="@drawable/home_selector"
-                android:paddingLeft="20dp"
-                android:button="@null"
-                android:gravity="center"
-                android:layout_width="60dp"
-                android:layout_height="match_parent" android:id="@+id/addCardToHome" android:layout_weight="1"/>
-        <RadioButton
-                android:checked="true"
-                android:drawableLeft="@drawable/card_selector"
-                android:paddingLeft="20dp"
-                android:gravity="center"
-                android:button="@null"
-                android:layout_width="60dp"
-                android:layout_height="match_parent" android:id="@+id/addCard" android:layout_weight="1"/>
-        <RadioButton
-                android:drawableLeft="@drawable/shoppingcart_selector"
-                android:paddingLeft="20dp"
-                android:gravity="center"
-                android:button="@null"
-                android:layout_width="60dp"
-                android:layout_height="match_parent" android:id="@+id/addCardToShoppingCart" android:layout_weight="1"/>
-        <RadioButton
-                android:drawableLeft="@drawable/mypage_selector"
-                android:paddingLeft="20dp"
-                android:gravity="center"
-                android:button="@null"
-                android:layout_width="60dp"
-                android:layout_height="match_parent" android:id="@+id/addCardToMyPage" android:layout_weight="1"/>
-    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>

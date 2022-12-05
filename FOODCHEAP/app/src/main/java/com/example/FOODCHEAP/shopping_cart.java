@@ -36,7 +36,7 @@ public class shopping_cart extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.productList);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
-        adapter = new cart_productAdapter(ProductList);
+        adapter = new cart_productAdapter(ProductList, dbHelper);
         recyclerView.setAdapter(adapter);
 
         TextView productCount = (TextView) findViewById(R.id.ProductCount);
@@ -46,11 +46,14 @@ public class shopping_cart extends AppCompatActivity {
         totalPrice.setText(decFormat.format(adapter.getTotalPrice()) + "원");
 
         TextView shopName = (TextView) findViewById(R.id.shoppingCartShopName);
+        TextView emptyText = (TextView) findViewById(R.id.EmptyText);
         if (adapter.getItemCount() == 0) {
             shopName.setText("");
+            emptyText.setText("상품이 담겨있지 않습니다.");
         }
         else {
             shopName.setText("쿠키네 식료품");
+            emptyText.setText("");
         }
 
         Button clearShoppingCart = (Button) findViewById(R.id.button13);
@@ -59,15 +62,15 @@ public class shopping_cart extends AppCompatActivity {
                 database = dbHelper.getWritableDatabase();
                 dbHelper.onUpgrade(database, 1, 2);
                 adapter.notifyDataSetChanged();
+                finish();
                 Intent intent = new Intent(getApplicationContext(), shopping_cart.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
-                Toast.makeText(getApplicationContext(), "장바구니 비워짐", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "장바구니를 비웠습니다.", Toast.LENGTH_SHORT).show();
             }
         });
 
         Button BuyNow = (Button) findViewById(R.id.BuyNow);
-
         if (adapter.getItemCount() != 0) {
             BuyNow.setClickable(true);
             BuyNow.setBackgroundResource(R.drawable.buy_now);
@@ -76,7 +79,7 @@ public class shopping_cart extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), Payment.class);
                     intent.putExtra("TotalPrice", adapter.getTotalPrice());
                     startActivity(intent);
-                    overridePendingTransition(0, 0);
+                    overridePendingTransition(R.anim.right_in, R.anim.slow_left_out);
                 }
             });
         }
@@ -84,8 +87,6 @@ public class shopping_cart extends AppCompatActivity {
             BuyNow.setClickable(false);
             BuyNow.setBackgroundResource(R.drawable.buy_now_gray);
         }
-
-
 
         RadioButton home = (RadioButton) findViewById(R.id.shoppingCartToHome);
         home.setOnClickListener(new View.OnClickListener() {

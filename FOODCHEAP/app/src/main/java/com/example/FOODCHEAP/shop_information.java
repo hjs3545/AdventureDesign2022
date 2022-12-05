@@ -38,6 +38,7 @@ public class shop_information extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), user_page.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.left_in, R.anim.slow_right_out);
             }
         });
 

@@ -42,6 +42,7 @@ public class user_page extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), shop_information.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.right_in, R.anim.slow_left_out);
             }
         });
 
