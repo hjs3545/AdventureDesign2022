@@ -51,7 +51,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="김푸드 님(구매자)"
+            android:text="김푸드님 (구매자)"
             android:textColor="@color/black"
             android:textSize="17dp"
             android:layout_width="wrap_content"

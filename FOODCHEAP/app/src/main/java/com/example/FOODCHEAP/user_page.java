@@ -29,11 +29,9 @@ public class user_page extends AppCompatActivity {
         setContentView(R.layout.user_page);
 
         AddData();
-
         recyclerView = (RecyclerView) findViewById(R.id.RecyclerViewMain);
         GridLayoutManager manager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(manager);
-
         recyclerView.setAdapter(ADAPTER);
 
         TextView shopText = (TextView) findViewById(R.id.shopName);
@@ -43,6 +41,13 @@ public class user_page extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), shop_information.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_in, R.anim.slow_left_out);
+            }
+        });
+
+        Button userChange = (Button) findViewById(R.id.userChangeButton);
+        userChange.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
             }
         });
 
@@ -60,6 +65,15 @@ public class user_page extends AppCompatActivity {
         wallet.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), wallet.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+            }
+        });
+
+        RadioButton myPage = (RadioButton) findViewById(R.id.homeToMyPage);
+        myPage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), my_page_customer.class);
                 startActivity(intent);
                 overridePendingTransition(0, 0);
             }

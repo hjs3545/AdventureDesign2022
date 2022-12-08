@@ -106,5 +106,14 @@ public class shopping_cart extends AppCompatActivity {
                 overridePendingTransition(0, 0);
             }
         });
+
+        RadioButton myPage = (RadioButton) findViewById(R.id.shoppingCartToMyPage);
+        myPage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), my_page_customer.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+            }
+        });
     }
 }

@@ -35,7 +35,6 @@
                   android:windowSoftInputMode="adjustPan"/>
         <activity android:name=".user_page"
                   android:windowSoftInputMode="adjustPan"/>
-        <activity android:name=".milk"/>
         <activity android:name=".shop_information"/>
         <activity android:name=".productDetail"/>
         <activity android:name=".register"/>
@@ -45,6 +44,7 @@
         <activity android:name=".Payment"/>
         <activity android:name=".CompletePayment"/>
         <activity android:name=".CardDetail"/>
+        <activity android:name=".my_page_customer"/>
     </application>
     
     <uses-permission android:name="android.permission.INTERNET"/>

@@ -75,6 +75,15 @@ public class wallet extends AppCompatActivity {
             }
         });
 
+        RadioButton myPage = (RadioButton) findViewById(R.id.walletToMyPage);
+        myPage.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), my_page_customer.class);
+                startActivity(intent);
+                overridePendingTransition(0, 0);
+            }
+        });
+
         Button addCard = (Button) findViewById(R.id.button6);
         addCard.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
