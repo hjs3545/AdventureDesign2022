@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.FOODCHEAP">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -16,6 +21,10 @@
 
         <!-- 상단 타이틀바 제거 코드 -->
         <!-- android:theme="@style/Theme.AppCompat.NoActionBar"-->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAgrcXnZT_l10Njvh8mDN0hZmxd4QI7mKI" />
 
         <activity
             android:name=".MainActivity"
@@ -45,6 +54,8 @@
         <activity android:name=".CompletePayment"/>
         <activity android:name=".CardDetail"/>
         <activity android:name=".my_page_customer"/>
+        <activity android:name=".search_address"/>
+        <activity android:name=".check_address"/>
     </application>
     
     <uses-permission android:name="android.permission.INTERNET"/>

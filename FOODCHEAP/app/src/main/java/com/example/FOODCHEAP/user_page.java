@@ -23,10 +23,21 @@ public class user_page extends AppCompatActivity {
     public RecyclerView recyclerView;
     public user_productAdapter ADAPTER;
 
+
+
     @Override
     protected void onCreate(@Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_page);
+
+        TextView address = (TextView) findViewById(R.id.textView52);
+        address.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), search_address.class);
+                startActivity(intent);
+            }
+        });
 
         AddData();
         recyclerView = (RecyclerView) findViewById(R.id.RecyclerViewMain);
